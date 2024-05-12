@@ -25,6 +25,24 @@ app.post('/', (req, res) => {
     })
 });
 
+app.get('/', (req, res) => {
+    const macAddress = req.query.macAddress;
+
+    if(!macAddress) {
+        return res.status(400).json({ status: 'error', message: 'MAC address required' });
+    }
+
+    wol.sendMagicPacket(macAddress)
+    .then(status => {
+        console.log(status);
+        res.json(status);
+    })
+    .catch(error => {
+        console.error(error);
+        res.status(500).json(error);
+    })
+});
+
 app.listen(port, () => {
     console.log('Server running on port ' + port);
 });

@@ -21,6 +21,10 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "options": { "address": "255.255.255.255", "port": "9" }
 }' http://localhost:9999/
 ```
+or
+```bash
+curl http://localhost:9999/?macAddress=00:AA:BB:CC:DD:EE
+```
 
 ## Options (optional)
  - `address`: broadcast address to send the magic packet to, default is `255.255.255.255`
