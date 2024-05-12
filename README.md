@@ -12,7 +12,7 @@ const wol = require('./wol.js');
 
 wol.sendMagicPacket(macAddress, options)
 .then (status => console.log(status))
-.catch (error => console.log(error))
+.catch (error => console.error(error))
 ```
 ### WoL API
 ```bash
