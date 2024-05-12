@@ -1,0 +1,9 @@
+{
+  "hosts": [
+    {
+      "id": "1",
+      "name": "Workstation",
+      "macAddress": "00:AA:BB:CC:DD:EE"
+    }
+  ]
+}

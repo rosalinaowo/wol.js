@@ -1,0 +1,21 @@
+{
+  "name": "wol.js",
+  "version": "1.0.0",
+  "main": "wol.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js",
+    "all": "concurrently \"node api.js\" \"npx json-server db.json\""
+  },
+  "keywords": [],
+  "author": "Rosa",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dgram": "^1.0.1",
+    "express": "^4.19.2",
+    "json-server": "^1.0.0-alpha.23"
+  }
+}
