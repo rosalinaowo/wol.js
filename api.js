@@ -7,7 +7,7 @@ const port = 9999;
 
 app.use(cors()).use(express.json());
 
-app.post('/wol', (req, res) => {
+app.post('/', (req, res) => {
     const { macAddress, options } = req.body;
 
     if(!macAddress) {
